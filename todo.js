@@ -1,3 +1,6 @@
 const todoList = {
-  todos: []
-}
+  todos: [],
+  displayTodos: function () {
+    console.log('My Todos:', this.todos);
+  }
+};
