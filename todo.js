@@ -43,9 +43,11 @@ const todoList = {
         completedTodos++;
       }
     }
-    if (completedTodos === totalTodos) {
-      for (var i = 0; i < totalTodos; i++) {
+    for (var i = 0; i < totalTodos; i++) {
+      if (completedTodos === totalTodos) {
         this.todos[i].completed = false;
+      } else {
+        this.todos[i].completed = true;
       }
     }
     this.displayTodos();
