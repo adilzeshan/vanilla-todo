@@ -66,5 +66,7 @@ toggleAllButton.addEventListener('click', function () {
 });
 
 const handlers = {
-  
+  displayTodos: function () {
+    todoList.displayTodos();
+  }
 };
