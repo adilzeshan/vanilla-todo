@@ -53,3 +53,5 @@ const todoList = {
     this.displayTodos();
   }
 };
+
+const displayTodosButton = document.getElementById('displayTodosButton');
