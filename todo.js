@@ -55,3 +55,7 @@ const todoList = {
 };
 
 const displayTodosButton = document.getElementById('displayTodosButton');
+
+displayTodosButton.addEventListener('click', function () {
+  todoList.displayTodos();
+});
