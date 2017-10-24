@@ -76,5 +76,6 @@ const handlers = {
   deleteTodo: function () {
     const deleteTodoPositionInput = document.getElementById('deleteTodoPositionInput');
     todoList.deleteTodo(deleteTodoPositionInput.valueAsNumber);
+    deleteTodoPositionInput.value = '';
   }
 };
