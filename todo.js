@@ -84,3 +84,7 @@ const handlers = {
     todoList.toggleAll();
   },
 };
+
+const view = {
+
+};
