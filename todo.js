@@ -91,6 +91,7 @@ const view = {
     todosUl.innerHTML = '';
     for (let i = 0; i < todoList.todos.length; i++) {
       const todoLi = document.createElement('li');
+      todoLi.textContent = todoList.todos[i].todoText;
       todosUl.appendChild(todoLi);
     }
   }
