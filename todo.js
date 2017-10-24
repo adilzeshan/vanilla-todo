@@ -88,6 +88,7 @@ const handlers = {
 const view = {
   displayTodos: function () {
     const todosUl = document.querySelector('ul');
+    todosUl.innerHTML = '';
     for (let i = 0; i < todoList.todos.length; i++) {
       const todoLi = document.createElement('li');
       todosUl.appendChild(todoLi);
