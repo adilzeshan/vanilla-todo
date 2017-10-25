@@ -1,20 +1,5 @@
 const todoList = {
   todos: [],
-  displayTodos: function () {
-    if (this.todos.length === 0) {
-      console.log('Your todo list is empty.');
-    } else {
-      console.log('My Todos:');
-      for (var i = 0; i < this.todos.length; i++) {
-        let todo = this.todos[i];
-        if (todo.completed) {
-          console.log('(x)', todo.todoText);
-        } else {
-          console.log('( )', todo.todoText);
-        }
-      }
-    }
-  },
   addTodo: function (todoText) {
     this.todos.push({
       todoText: todoText,
