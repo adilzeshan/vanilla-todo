@@ -20,20 +20,16 @@ const todoList = {
       todoText: todoText,
       completed: false
     });
-    this.displayTodos();
   },
   changeTodo: function (position, todoText) {
     this.todos[position].todoText = todoText;
-    this.displayTodos();
   },
   deleteTodo: function (position) {
     this.todos.splice(position, 1);
-    this.displayTodos();
   },
   toggleCompleted: function (position) {
     const todo = this.todos[position];
     todo.completed = !todo.completed;
-    this.displayTodos();
   },
   toggleAll: function () {
     let completedTodos = 0;
@@ -50,7 +46,6 @@ const todoList = {
         this.todos[i].completed = true;
       }
     }
-    this.displayTodos();
   }
 };
 
