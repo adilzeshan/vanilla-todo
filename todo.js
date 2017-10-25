@@ -55,9 +55,6 @@ const todoList = {
 };
 
 const handlers = {
-  displayTodos: function () {
-    todoList.displayTodos();
-  },
   addTodo: function () {
     const addTodoTextInput = document.getElementById('addTodoTextInput');
     todoList.addTodo(addTodoTextInput.value);
