@@ -69,9 +69,8 @@ const view = {
   displayTodos: function () {
     const todosUl = document.querySelector('ul');
     todosUl.innerHTML = '';
-    for (let i = 0; i < todoList.todos.length; i++) {
+    todoList.todos.forEach(function (todo, position) {
       const todoLi = document.createElement('li');
-      const todo = todoList.todos[i];
       let todoTextWithCompletion = '';
 
       if (todo.completed) {
@@ -80,11 +79,11 @@ const view = {
         todoTextWithCompletion = '( ) ' + todo.todoText;
       }
 
-      todoLi.id = i;
+      todoLi.id = position;
       todoLi.textContent = todoTextWithCompletion;
       todoLi.appendChild(this.createDeleteButton());
       todosUl.appendChild(todoLi);
-    }
+    }, this);
   },
   createDeleteButton: function () {
     const deleteButton = document.createElement('button');
