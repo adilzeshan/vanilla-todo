@@ -19,18 +19,18 @@ const todoList = {
   toggleAll: function () {
     let completedTodos = 0;
     let totalTodos = this.todos.length;
-    for (var i = 0; i < totalTodos; i++) {
-      if (this.todos[i].completed) {
+    this.todos.forEach(function (todo) {
+      if (todo.completed) {
         completedTodos++;
       }
-    }
-    for (var i = 0; i < totalTodos; i++) {
+    });
+    this.todos.forEach(function (todo) {
       if (completedTodos === totalTodos) {
-        this.todos[i].completed = false;
+        todo.completed = false;
       } else {
-        this.todos[i].completed = true;
+        todo.completed = true;
       }
-    }
+    });
   }
 };
 
