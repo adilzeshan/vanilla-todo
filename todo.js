@@ -91,5 +91,14 @@ const view = {
     deleteButton.textContent = 'Delete';
     deleteButton.className = 'deleteButton';
     return deleteButton;
+  },
+  setUpEventListeners: function () {
+    const todosUl = document.querySelector('ul');
+    todosUl.addEventListener('click', function (event) {
+      const elementClicked = event.target;
+      if (elementClicked.className === 'deleteButton') {
+        handlers.deleteTodo(parseInt(elementClicked.parentNode.id));
+      }
+    });
   }
 };
